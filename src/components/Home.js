@@ -92,24 +92,41 @@ const priceCard = (params) => {
   const proceed_text=["Try Now","Buy Now","Buy Now","Buy Now"];
 
   card.push(Array(4).fill(0).map((_,i)=>{
-        return <div key={i} class="col-sm-3 mb-3 mb-sm-0 shadow">
-                <div className="card bg-success " style={{color:"white"}}>
-                  <div className="card-body ">
-                    <h5 className="card-title mt-2">{price_text[i]}</h5>
-                    <span className='d-flex mt-4 justify-content-start'><h2>${price[i]}</h2>/Month</span>
-                    <div className='mt-3'>
-                      <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{website_count[i]}<br/>
-                      <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{storage_count[i]}<br/>
-                      <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{domain_type[i]}<br/>
-                      <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>SSL Certificate<br/>
-                      <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{time_period[i]}<br/>
-                    </div>
-                    <div className="d-flex justify-content-center mt-5 ">
-                      <a href="/" className="btn btn-light">{proceed_text[i]}</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  //     return <div key={i} class="col-sm-3 mb-3 mb-sm-0 shadow">
+  //             <div className="card bg-success " style={{color:"white"}}>
+  //               <div className="card-body ">
+  //                 <h5 className="card-title mt-2">{price_text[i]}</h5>
+  //                 <span className='d-flex mt-4 justify-content-start'><h2>${price[i]}</h2>/Month</span>
+  //                 <div className='mt-3'>
+  //                   <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{website_count[i]}<br/>
+  //                   <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{storage_count[i]}<br/>
+  //                   <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{domain_type[i]}<br/>
+  //                   <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>SSL Certificate<br/>
+  //                   <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{time_period[i]}<br/>
+  //                 </div>
+  //                 <div className="d-flex justify-content-center mt-5 ">
+  //                   <a href="/" className="btn btn-light">{proceed_text[i]}</a>
+  //                 </div>
+  //               </div>
+  //             </div>
+  //           </div>
+  // }))
+  return <div key={i} class="col-sm-3 ms-3 card" style={{borderWidth:"0px",boxShadow:"5px"}}>
+          <div class="card-body text-bg-success" style={{borderRadius:"3%"}}>
+          <h5 className="card-title mt-2">{price_text[i]}</h5>
+            <span className='d-flex mt-4 justify-content-start'><h2>${price[i]}</h2>/Month</span>
+            <div className='mt-3'>
+              <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{website_count[i]}<br/>
+              <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{storage_count[i]}<br/>
+              <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{domain_type[i]}<br/>
+              <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>SSL Certificate<br/>
+              <TiTick style={{fontSize:"30px",marginRight:"5px"}}/>{time_period[i]}<br/>
+            </div>
+            <div className="d-flex justify-content-center mt-5 ">
+              <a href="/" className="btn btn-light">{proceed_text[i]}</a>
+            </div>
+          </div>
+        </div>
   }))
   return card;
 }
@@ -255,10 +272,19 @@ function Home() {
       </div>
 
       <div className="row">
+        <div class="card-group">
         {priceCard()}
-        
-        
+        </div>
       </div>
+      {/* <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div> */}
     </div>
   )
 }

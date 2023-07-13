@@ -7,9 +7,8 @@ function MainLayout() {
   return (
     <>
       <Header/>
-      {/* data */}
       <Outlet/>
-      {/* <Footer/> */}
+      <Footer/>
     </>
   )
 }
