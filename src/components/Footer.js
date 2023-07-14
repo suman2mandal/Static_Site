@@ -1,56 +1,51 @@
 import React from 'react'
+import {PiNyTimesLogoBold} from 'react-icons/pi'
 
 function Footer() {
   return (
-    <>
-      <div class="card-group">
+    <div className="container-fluid bg-dark text-white mt-5">
+      <div className=" row d-flex justify-content-evenly">
+        <div className="col p-3 text-center">
+          <span className="d-flex justify-content-center mb-4" style={{fontSize:"50px"}}><PiNyTimesLogoBold/></span>
+          <div className="mb-4">One-click solution for your static website. Copyright © 2019-2023.
+          All Rights Reserved.</div>
 
-        <div class="card">
+          Made by <span style={{color:"green",fontSize:"20px"}}>Suman Mandal</span>
+        </div>
+        <div className="col p-3">
+          <div className="mb-4" style={{color:"rgb(255,255,255,0.5)"}}>SERVICE</div>
 
-            <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-            </div>
+          <div class="p-2">Status</div>
+          <div class="p-2">FAQ</div>
+          <div class="p-2">Help Docs</div>
+          <div class="p-2">Privacy Policy</div>
+          <div class="p-2">Terms of Use</div>
         </div>
-        <div class="card">
-            <div class="card-header">
-                Featured
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-            </ul>
+        <div className="col p-3">
+        <div className="mb-4" style={{color:"rgb(255,255,255,0.5)"}}> FEATURES</div>
+
+          <div class="p-2">HTML File Upload</div>
+          <div class="p-2">HTML Website Hosting</div>
+          <div class="p-2">Free Image Hosting</div>
+          <div class="p-2">Static Website Form</div>
+          <div class="p-2">Upload PDF Online</div>
+          <div class="p-2">Free Zip File Hosting</div> 
         </div>
-        <div class="card">
-            <div class="card-header">
-                Featured
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-            </ul>
+        <div className="col p-3">
+          <div className="mb-4 d-flex flex-column" style={{color:"rgb(255,255,255,0.5)"}}>ACCOUNT</div>
+          <div class="p-2">Login</div>
+          <div class="p-2">Sign up</div>
+          <div class="p-2">Reset Password</div>
+          <div class="p-2">Support</div>
+          <div class="p-2">Affiliates</div>
         </div>
-        <div class="card">
-            <div class="card-header">
-                Featured
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">An item</li>
-                <li class="list-group-item">A second item</li>
-                <li class="list-group-item">A third item</li>
-            </ul>
+        <div className="col p-3">
+          <div className="mb-4" style={{color:"rgb(255,255,255,0.5)"}}>STAY IN TOUCH</div>
+          <input type="text" placeholder="Enter your email" className="form-control mb-3"/>
+          <input type="checkbox" className="form-check-input" style={{marginRight:"5px"}}/>I accept the <span style={{color:"rgba(255,255,255,0.5)"}}>Privacy Policy</span>
         </div>
-        <div class="card">
-            <div class="card-header">
-                Featured
-            </div>
-            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1"/>
-        </div>
-        </div>
-    </>
+      </div>
+    </div>
   )
 }
 
